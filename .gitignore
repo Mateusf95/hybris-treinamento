@@ -1,0 +1,39 @@
+# Folders to ignore, whatever the place they are
+eclipsebin
+.metadata
+.settings
+classes
+gensrc
+.externalToolBuilders
+
+# Filename patterns to ignore
+*.class
+build.xml
+.ant-targets-build.xml
+Generated*.java
+platformhome.properties
+hybris4intellij.properties
+*testclasses.xml
+extensioninfo.xsd
+*hmc.jar
+hmc.xsd
+items.xsd
+beans.xsd
+ruleset.xml
+*.log
+base.properties
+.project
+.classpath
+.springBeans
+.lastupdate
+**/lib/*.jar
+
+#  Addon specific copy folders
+**/_ui/addons
+**/views/addons
+**/tld/addons
+**/tags/addons
+**/messages/addons
+**/jalo
+*_bof.jar
+**/WEB-INF/cache

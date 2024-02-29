@@ -1,0 +1,11 @@
+#Ant properties
+#Thu Oct 20 19:15:11 CEST 2022
+version.api=2205
+vendor=hybris
+group.id=de.hybris.platform
+name=trainingfacades
+description=trainingfacades
+builddate=20221020 1914
+releasedate=20220601 2009
+version=2205.5
+module.name=platform-module
