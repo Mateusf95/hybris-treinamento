@@ -28,9 +28,9 @@
 
                     <formElement:formInputBox idKey="profile.lastName" labelKey="profile.lastName" path="lastName" inputCSS="text" mandatory="true"/>
 
-                    <formElement:formInputBox idKey="profile.document" labelKey="profile.document" path="document" inputCSS="text" disabled="true"/>
+                    <formElement:formInputBox idKey="profile.document" labelKey="profile.document" path="document" inputCSS="text cpfMask" disabled="true"/>
 
-                    <formElement:formInputBox idKey="profile.birthdate" labelKey="profile.birthdate" path="birthdate" inputCSS="text" mandatory="true"/>
+                    <formElement:formInputBox idKey="profile.birthdate" labelKey="profile.birthdate" path="birthdate" inputCSS="text dateMask" mandatory="true"/>
 
                     <div class="row">
                         <div class="col-sm-6 col-sm-push-6">

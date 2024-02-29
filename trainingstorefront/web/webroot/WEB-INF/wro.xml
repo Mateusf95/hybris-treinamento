@@ -35,6 +35,7 @@
 		<js>/_ui/responsive/common/js/owl.carousel.custom.js</js>
 		<js minimize="false">/_ui/responsive/common/js/jquery.tmpl-1.0.0pre.min.js</js>
 		<js minimize="false">/_ui/responsive/common/js/jquery.currencies.min.js</js>
+		<js	minimize="false">/_ui/responsive/common/js/jquery.mask.min.js</js>
 		
 		<!-- Custom ACC JS -->
 		<js>/_ui/responsive/common/js/acc.address.js</js>
@@ -52,6 +53,7 @@
 		<js>/_ui/responsive/common/js/acc.hopdebug.js</js>
 		<js>/_ui/responsive/common/js/acc.imagegallery.js</js>
 		<js>/_ui/responsive/common/js/acc.langcurrencyselector.js</js>
+		<js>/_ui/responsive/common/js/acc.masks.js</js>
 		<js>/_ui/responsive/common/js/acc.minicart.js</js>
 		<js>/_ui/responsive/common/js/acc.navigation.js</js>
 		<js>/_ui/responsive/common/js/acc.order.js</js>

@@ -36,11 +36,11 @@
 		mandatory="true" />
 
 	<formElement:formInputBox idKey="register.document"
-        labelKey="register.document" path="document" inputCSS="form-control"
-        mandatory="true" placeholder="CPF - xxx.xxx.xxx-xx"/>
+        labelKey="register.document" path="document" inputCSS="cpfMask form-control"
+        mandatory="true" />
     <formElement:formInputBox idKey="register.birthdate"
-   		labelKey="register.birthdate" path="birthdate" inputCSS="form-control"
-   		mandatory="true" placeholder="dd/mm/yyyy"/>
+   		labelKey="register.birthdate" path="birthdate" inputCSS="dateMask form-control"
+   		mandatory="true" />
 
 	<formElement:formPasswordBox idKey="password" labelKey="register.pwd"
 		path="pwd" inputCSS="form-control password-strength" mandatory="true" />

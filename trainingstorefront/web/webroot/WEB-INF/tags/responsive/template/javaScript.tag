@@ -35,6 +35,7 @@
 		<script src="${commonResourcePathHtml}/js/jquery.currencies.min.js"></script>
 		<script src="${commonResourcePathHtml}/js/jquery.waitforimages.min.js"></script>
 		<script src="${commonResourcePathHtml}/js/jquery.slideviewer.custom.1.2.js"></script>
+		<script src="${commonResourcePathHtml}/js/jquery.mask.min.js"></script>
 		
 		<%-- Custom ACC JS --%>
 		
@@ -53,6 +54,7 @@
 		<script src="${commonResourcePathHtml}/js/acc.hopdebug.js"></script>
 		<script src="${commonResourcePathHtml}/js/acc.imagegallery.js"></script>
 		<script src="${commonResourcePathHtml}/js/acc.langcurrencyselector.js"></script>
+		<script src="${commonResourcePathHtml}/js/acc.masks.js"></script>
 		<script src="${commonResourcePathHtml}/js/acc.minicart.js"></script>
 		<script src="${commonResourcePathHtml}/js/acc.navigation.js"></script>
 		<script src="${commonResourcePathHtml}/js/acc.order.js"></script>
