@@ -242,6 +242,7 @@
 
         <property name="eventService" ref="eventService"/>
         <property name="userMatchingService" ref="userMatchingService"/>
+        <property name="trainingCustomerAccountService" ref="trainingCustomerAccountService"/>
     </bean>
 
     <alias name="defaultTrainingCustomerPopulator" alias="trainingCustomerPopulator"/>
