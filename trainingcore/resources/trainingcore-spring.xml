@@ -542,4 +542,15 @@
 	<alias name="defaultTrainingCustomerAccountServiceImpl" alias="trainingCustomerAccountService"/>
 	<bean id="defaultTrainingCustomerAccountServiceImpl" parent="defaultCustomerAccountService"
 		  class="de.hybris.training.core.services.customer.impl.DefaultTrainingCustomerAccountServiceImpl"/>
+
+	<alias name="defaultTrainingCustomerDao" alias="trainingCustomerDao"/>
+	<bean id="defaultTrainingCustomerDao" parent="abstractItemDao"
+		  class="de.hybris.training.core.services.customer.dao.impl.TrainingCustomerDaoImpl"/>
+
+	<alias name="defaultTrainingCustomerService" alias="trainingCustomerService"/>
+	<bean id="defaultTrainingCustomerService"
+		  class="de.hybris.training.core.services.customer.impl.TrainingCustomerServiceImpl">
+		<property name="trainingCustomerDao" ref="trainingCustomerDao"/>
+	</bean>
+
 </beans>
