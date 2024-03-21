@@ -27,7 +27,7 @@
 		</span>
 	</c:if>	
 	
-		<formElement:formInputBox idKey="j_username" labelKey="login.email"
+		<formElement:formInputBox idKey="j_username" labelKey="login.email.document"
 			path="j_username" mandatory="true" />
 		<formElement:formPasswordBox idKey="j_password"
 			labelKey="login.password" path="j_password" inputCSS="form-control"

@@ -6,9 +6,13 @@ package de.hybris.training.storefront.security;
 import de.hybris.platform.acceleratorstorefrontcommons.security.AbstractAcceleratorAuthenticationProvider;
 import de.hybris.platform.core.Constants;
 
+import de.hybris.platform.core.model.user.CustomerModel;
+import de.hybris.training.core.services.customer.TrainingCustomerService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.security.authentication.AbstractAuthenticationToken;
 import org.springframework.security.authentication.LockedException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -31,6 +35,20 @@ public class AcceleratorAuthenticationProvider extends AbstractAcceleratorAuthen
 	private static final String ROLE_ADMIN_GROUP = "ROLE_" + Constants.USER.ADMIN_USERGROUP.toUpperCase();
 
 	private GrantedAuthority adminAuthority = new SimpleGrantedAuthority(ROLE_ADMIN_GROUP);
+
+	private TrainingCustomerService trainingCustomerService;
+	@Override
+	public Authentication authenticate(final Authentication authentication) throws AuthenticationException {
+
+		final CustomerModel customer = trainingCustomerService.getCustomerByDocument((String) authentication.getPrincipal());
+
+		if(customer != null){
+			final UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(customer.getUid(), authentication.getCredentials());
+			authToken.setDetails(authentication.getDetails());
+			return super.authenticate(authToken);
+		}
+		return super.authenticate(authentication);
+	}
 
 	/**
 	 * @see de.hybris.platform.acceleratorstorefrontcommons.security.AbstractAcceleratorAuthenticationProvider#additionalAuthenticationChecks(org.springframework.security.core.userdetails.UserDetails,
@@ -64,5 +82,9 @@ public class AcceleratorAuthenticationProvider extends AbstractAcceleratorAuthen
 	protected GrantedAuthority getAdminAuthority()
 	{
 		return adminAuthority;
+	}
+
+	public void setTrainingCustomerService(TrainingCustomerService trainingCustomerService) {
+		this.trainingCustomerService = trainingCustomerService;
 	}
 }

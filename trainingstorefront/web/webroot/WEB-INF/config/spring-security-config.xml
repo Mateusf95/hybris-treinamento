@@ -120,6 +120,7 @@
 	<bean id="acceleratorAuthenticationProvider" parent="abstractAcceleratorAuthenticationProvider" 
 			class="de.hybris.training.storefront.security.AcceleratorAuthenticationProvider">
 		<property name="adminGroup" value="ROLE_ADMINGROUP"/>
+		<property name="trainingCustomerService" ref="trainingCustomerService"/>
 	</bean>
 
 	<bean id="coreUserDetailsService" class="de.hybris.platform.spring.security.CoreUserDetailsService"  />
