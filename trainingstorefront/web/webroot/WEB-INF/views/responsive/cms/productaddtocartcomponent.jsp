@@ -16,6 +16,7 @@
 </c:choose>
 
 <c:set var="qtyMinus" value="1" />
+<c:set var="stockMin" value="${product.stockMin}"/>
 
 <div class="addtocart-component">
 		<c:if test="${empty showAddToCart ? true : showAddToCart}">
@@ -46,8 +47,20 @@
 			</c:set>
 		</c:if>
 		<div class="stock-wrapper clearfix">
+            <c:choose>
+                <c:when test="${maxQty < stockMin}">
+                    <span style="color: red;"><i>${productStockLevelHtml}</i></span>
+                </c:when>
+                <c:otherwise>
+                    ${productStockLevelHtml}
+                </c:otherwise>
+            </c:choose>
+        </div>
+        <%-- <span>Valor: ${stockMin}</span> --%>
+        <%-- implementação anterior --%>
+		<%-- <div class="stock-wrapper clearfix">
 			${productStockLevelHtml}
-		</div>
+		</div> --%>
 		 <div class="actions">
         <c:if test="${multiDimensionalProduct}" >
                 <c:url value="${product.url}/orderForm" var="productOrderFormUrl"/>

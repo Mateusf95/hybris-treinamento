@@ -254,4 +254,35 @@
         <property name="add" ref="trainingCustomerPopulator"/>
     </bean>
 
+<!--    <alias name="defaultTrainingStockFacade" alias="trainingStockFacade"/>-->
+<!--    <bean id="defaultTrainingStockFacade" parent="defaultProductFacade"-->
+<!--          class="de.hybris.training.facades.stock.impl.DefaultTrainingStockFacade">-->
+<!--        <property name="productService" ref="productService"/>-->
+<!--        <property name="customerReviewService" ref="customerReviewService"/>-->
+<!--        <property name="userService" ref="userService"/>-->
+<!--        <property name="modelService" ref="modelService"/>-->
+<!--        <property name="commonI18NService" ref="commonI18NService"/>-->
+
+<!--        <property name="customerReviewConverter" ref="customerReviewConverter"/>-->
+<!--        <property name="productConverter" ref="productConverter"/>-->
+<!--        <property name="productConfiguredPopulator" ref="productConfiguredPopulator"/>-->
+
+<!--        <property name="commerceProductReferenceService" ref="commerceProductReferenceService"/>-->
+<!--        <property name="referenceDataProductReferenceConverter" ref="referenceDataProductReferenceConverter"/>-->
+<!--        <property name="referenceProductConfiguredPopulator" ref="productConfiguredPopulator"/>-->
+<!--        <property name="productConfigurationConverter" ref="orderEntryProductInfoConverter"/>-->
+<!--        <property name="configurationHandlerFactory" ref="productConfigurationHandlerFactory"/>-->
+<!--        <property name="configuratorSettingsService" ref="configuratorSettingsService"/>-->
+<!--    </bean>-->
+
+    <!--Adcionando o Bean do populator-->
+    <alias name="defaultTrainingStockPopulator" alias="trainingStockPopulator"/>
+    <bean id="defaultTrainingStockPopulator"
+          class="de.hybris.training.facades.populators.TrainingStockPopulator"/>
+
+    <bean parent="modifyPopulatorList">
+        <property name="list" ref="productConverter"/>
+        <property name="add" ref="trainingStockPopulator"/>
+    </bean>
+
 </beans>

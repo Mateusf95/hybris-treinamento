@@ -42,4 +42,15 @@
 			</ea:editorArea>
 		</context>
 	</context>
+<!--	<context type="Product">-->
+<!--		<context component="editor-area" merge-by="type">-->
+<!--			<ea:editorArea>-->
+<!--				<ea:essentials>-->
+<!--					<ea:essentialSection name="hmc.essential">-->
+<!--						<ea:attribute qualifier="stockMin" position="100"/>-->
+<!--					</ea:essentialSection>-->
+<!--				</ea:essentials>-->
+<!--			</ea:editorArea>-->
+<!--		</context>-->
+<!--	</context>-->
 </config>

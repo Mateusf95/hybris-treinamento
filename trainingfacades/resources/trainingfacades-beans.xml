@@ -6,6 +6,7 @@
 
 	<bean class="de.hybris.platform.commercefacades.product.data.ProductData">
 		<property name="genders" type="java.util.List&lt;de.hybris.training.facades.product.data.GenderData>"/>
+		<property name="stockMin" type="Long"/>
 	</bean>
 
 	<bean class="de.hybris.training.facades.product.data.GenderData">

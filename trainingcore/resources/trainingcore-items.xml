@@ -123,6 +123,19 @@
                     </attribute>
                 </attributes>
             </itemtype>
+
+            <!-- Criação do item de stockMin -->
+            <itemtype code="Product" autocreate="false" generate="false">
+                <attributes>
+                    <attribute qualifier="stockMin" type="java.lang.Long">
+                        <modifiers read="true"
+                                   write="true"
+                                   optional="true"
+                                   initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
         </typegroup>
     </itemtypes>
 </items>
