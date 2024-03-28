@@ -33,7 +33,6 @@ import de.hybris.platform.core.model.product.ProductModel;
 import de.hybris.platform.product.ProductService;
 import de.hybris.platform.servicelayer.exceptions.UnknownIdentifierException;
 import de.hybris.platform.util.Config;
-import de.hybris.training.facades.stock.TrainingStockFacade;
 import de.hybris.training.storefront.controllers.ControllerConstants;
 
 import java.io.UnsupportedEncodingException;
